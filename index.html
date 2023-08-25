@@ -4,24 +4,28 @@
 <head>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
-</head>
-
-<body>
     <script>
         AFRAME.registerComponent('scale-on-mouseenter', {
             schema: {
-                to: { default: '2.5 2.5 2.5', type: 'vec3' }
+                color: { default: 'blue' }
             },
 
             init: function () {
                 var data = this.data;
                 var el = this.el;
                 this.el.addEventListener('mouseenter', function () {
-                    el.object3D.scale.copy(data.to);
+                    el.setAttribute('color', data.color);
+                });
+                el.addEventListener('mouseleave', function () {
+                    el.setAttribute('color', defaultColor);
                 });
             }
         });
     </script>
+</head>
+
+<body>
+
 
     <a-scene fog="type: linear; color: #AAA">
         <a-assets>
@@ -29,7 +33,7 @@
             <img id="groundTexture" src="assets/moon.jpg">
         </a-assets>
         <a-sky src="#skyTexture"></a-sky>
-        <a-box color="blue" position="0 2 -5" rotation="0 45 45" scale="2 2 2" scale-on-mouseenter></a-box>
+        <a-box color="blue" position="0 2 -5" rotation="0 45 45" scale="2 2 2" change-color-on-hover="color: red"></a-box>
         <a-camera>
             <a-cursor></a-cursor>
         </a-camera>
