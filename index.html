@@ -14,12 +14,15 @@
         <a-assets>
             <img id="skyTexture" src="assets/sky.jpg">
             <img id="groundTexture" src="assets/moon.jpg">
+            <audio id="starlit" src="assets/starlit_sanctum.mp3" autoplay preload></audio>
         </a-assets>
         <a-sky src="#skyTexture"></a-sky>
-        <a-box color="blue" position="0 2 -5" rotation="0 45 45" scale="2 2 2" change-color-on-hover="color: red"></a-box>
+        <a-box color="blue" position="0 2 -5" rotation="0 45 45" scale="2 2 2"
+            change-color-on-hover="color: red"></a-box>
         <a-camera>
             <a-cursor></a-cursor>
         </a-camera>
+        <a-sound src="#starlit" autoplay="true" loop="true"></a-sound>
         <a-plane src="#groundTexture" rotation="-90 0 0" width="100" height="100" repeat="10 10"></a-plane>
     </a-scene>
 </body>
