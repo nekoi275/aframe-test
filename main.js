@@ -10,7 +10,7 @@ AFRAME.registerComponent('change-color-on-hover', {
             el.setAttribute('color', data.color);
         });
         el.addEventListener('mouseleave', function () {
-            el.setAttribute('color', defaultColor);
+            el.setAttribute('color', '');
         });
     }
 });
