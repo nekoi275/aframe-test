@@ -4,24 +4,7 @@
 <head>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
-    <script>
-        AFRAME.registerComponent('scale-on-mouseenter', {
-            schema: {
-                color: { default: 'blue' }
-            },
-
-            init: function () {
-                var data = this.data;
-                var el = this.el;
-                this.el.addEventListener('mouseenter', function () {
-                    el.setAttribute('color', data.color);
-                });
-                el.addEventListener('mouseleave', function () {
-                    el.setAttribute('color', defaultColor);
-                });
-            }
-        });
-    </script>
+    <script src="main.js"></script>
 </head>
 
 <body>
