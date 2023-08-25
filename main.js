@@ -1,4 +1,4 @@
-AFRAME.registerComponent('scale-on-mouseenter', {
+AFRAME.registerComponent('change-color-on-hover', {
     schema: {
         color: { default: 'blue' }
     },
