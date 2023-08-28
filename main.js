@@ -1,7 +1,7 @@
 AFRAME.registerComponent('change-color-on-hover', {
     schema: {
         color: { default: 'blue' },
-        sound: {}
+        sound: {type: 'string'}
     },
 
     init: function () {
