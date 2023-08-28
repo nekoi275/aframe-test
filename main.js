@@ -10,6 +10,7 @@ AFRAME.registerComponent('change-on-hover', {
         let data = this.data;
         let el = this.el;
         this.el.addEventListener('mouseenter', function () {
+            document.querySelectorAll('[sound]').forEach(s => s.components.sound.stopSound());
             el.setAttribute('color', data.color);
             document.querySelector(`#${data.sound}`).components.sound.playSound();
             document.querySelector('a-sky').setAttribute('src', `#${data.sky}`);
@@ -17,7 +18,6 @@ AFRAME.registerComponent('change-on-hover', {
         });
         el.addEventListener('mouseleave', function () {
             el.setAttribute('color', 'blue');
-            document.querySelector(`#${data.sound}`).components.sound.pauseSound();
         });
     }
 });
