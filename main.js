@@ -1,4 +1,4 @@
-let soundEntity = document.querySelector('[sound]');
+let soundEntity = document.querySelector('#starlitSound');
 console.log(soundEntity)
 
 AFRAME.registerComponent('change-color-on-hover', {
