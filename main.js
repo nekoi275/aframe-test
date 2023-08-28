@@ -1,4 +1,4 @@
-AFRAME.registerComponent('change-color-on-hover', {
+AFRAME.registerComponent('sound-color-on-hover', {
     schema: {
         color: { default: 'blue' },
         sound: {type: 'string'}
