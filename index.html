@@ -18,12 +18,13 @@
             <img id="grassTexture" src="assets/grass.jpg">
             <img id="beachTexture" src="assets/beach.jpeg">
             <img id="sandTexture" src="assets/sand.jpg">
+            <a-asset-item id="flower" src="assets/flower.gltf"></a-asset-item>
             <audio id="starlit" src="assets/starlit_sanctum.mp3" preload></audio>
             <audio id="sublime" src="assets/sublime_spring.mp3" preload></audio>
             <audio id="sunshine" src="assets/sunshine_beach.mp3" preload></audio>
         </a-assets>
         <a-sky src="#skyTexture"></a-sky>
-        <a-box color="blue" position="0 2 -5" rotation="0 45 45" change-on-hover="color: red; sound: starlitSound; sky: skyTexture; floor: groundTexture"></a-box>
+        <a-gltf-model src="#flower" position="0 2 -5" change-on-hover="sound: starlitSound; sky: skyTexture; floor: groundTexture"></a-box>
         <a-box color="blue" position="3 2 -5" rotation="0 45 45" change-on-hover="color: red; sound: sublimeSound; sky: templeTexture; floor: grassTexture"></a-box>
         <a-box color="blue" position="6 2 -5" rotation="0 45 45" change-on-hover="color: red; sound: sunshineSound; sky: beachTexture; floor: sandTexture"></a-box>
         <a-entity id="starlitSound" sound="src: #starlit" loop="true"></a-entity>
