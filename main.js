@@ -1,9 +1,7 @@
-let soundEntity = document.querySelector('#starlitSound');
-console.log(soundEntity)
-
 AFRAME.registerComponent('change-color-on-hover', {
     schema: {
-        color: { default: 'blue' }
+        color: { default: 'blue' },
+        sound: {}
     },
 
     init: function () {
@@ -11,9 +9,11 @@ AFRAME.registerComponent('change-color-on-hover', {
         let el = this.el;
         this.el.addEventListener('mouseenter', function () {
             el.setAttribute('color', data.color);
+            document.querySelector(`#${data.sound}`).components.sound.playSound();
         });
         el.addEventListener('mouseleave', function () {
             el.setAttribute('color', 'blue');
+            document.querySelector(`#${data.sound}`).components.sound.pauseSound();
         });
     }
 });
