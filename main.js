@@ -1,7 +1,9 @@
-AFRAME.registerComponent('sound-color-on-hover', {
+AFRAME.registerComponent('change-on-hover', {
     schema: {
         color: { default: 'blue' },
-        sound: {type: 'string'}
+        sound: {type: 'string'},
+        sky: {type: 'string'},
+        floor: {type: 'string'}
     },
 
     init: function () {
@@ -10,6 +12,8 @@ AFRAME.registerComponent('sound-color-on-hover', {
         this.el.addEventListener('mouseenter', function () {
             el.setAttribute('color', data.color);
             document.querySelector(`#${data.sound}`).components.sound.playSound();
+            document.querySelector('a-sky').setAttribute('src', `#${data.sky}`);
+            document.querySelector('a-plane').setAttribute('src', `#${data.floor}`);
         });
         el.addEventListener('mouseleave', function () {
             el.setAttribute('color', 'blue');

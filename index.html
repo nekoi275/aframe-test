@@ -14,12 +14,14 @@
         <a-assets>
             <img id="skyTexture" src="assets/sky.jpg">
             <img id="groundTexture" src="assets/moon.jpg">
+            <img id="templeTexture" src="assets/temple.jpeg">
+            <img id="grassTexture" src="assets/grass.jpg">
             <audio id="starlit" src="assets/starlit_sanctum.mp3" preload></audio>
             <audio id="sublime" src="assets/sublime_spring.mp3" preload></audio>
         </a-assets>
         <a-sky src="#skyTexture"></a-sky>
-        <a-box color="blue" position="0 2 -5" rotation="0 45 45" sound-color-on-hover="color: red; sound: starlitSound"></a-box>
-        <a-box color="blue" position="3 2 -5" rotation="0 45 45" sound-color-on-hover="color: red; sound: sublimeSound"></a-box>
+        <a-box color="blue" position="0 2 -5" rotation="0 45 45" change-on-hover="color: red; sound: starlitSound; sky: skyTexture; floor: groundTexture"></a-box>
+        <a-box color="blue" position="3 2 -5" rotation="0 45 45" change-on-hover="color: red; sound: sublimeSound; sky: templeTexture; floor: grassTexture"></a-box>
         <a-entity id="starlitSound" sound="src: #starlit"></a-entity>
         <a-entity id="sublimeSound" sound="src: #sublime"></a-entity>
         <a-camera>
