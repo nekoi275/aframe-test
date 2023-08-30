@@ -24,7 +24,7 @@
             <audio id="sunshine" src="assets/sunshine_beach.mp3" preload></audio>
         </a-assets>
         <a-sky src="#skyTexture"></a-sky>
-        <a-gltf-model src="#flower" position="0 0 -5" change-on-hover="sound: starlitSound; sky: skyTexture; floor: groundTexture"></a-gltf-model>
+        <a-box color="blue" position="0 2 -5" rotation="0 45 45" change-on-hover="color: red; sound: starlitSound; sky: skyTexture; floor: moonTexture"></a-box>
         <a-box color="blue" position="3 2 -5" rotation="0 45 45" change-on-hover="color: red; sound: sublimeSound; sky: templeTexture; floor: grassTexture"></a-box>
         <a-box color="blue" position="6 2 -5" rotation="0 45 45" change-on-hover="color: red; sound: sunshineSound; sky: beachTexture; floor: sandTexture"></a-box>
         <a-entity id="starlitSound" sound="src: #starlit" loop="true"></a-entity>
