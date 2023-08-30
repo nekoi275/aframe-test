@@ -1,9 +1,9 @@
 AFRAME.registerComponent('change-on-hover', {
     schema: {
-        color: { default: 'blue' },
         sound: {type: 'string'},
         sky: {type: 'string'},
-        floor: {type: 'string'}
+        floor: {type: 'string'},
+        next: {type: 'string'}
     },
 
     init: function () {
@@ -11,13 +11,13 @@ AFRAME.registerComponent('change-on-hover', {
         let el = this.el;
         this.el.addEventListener('mouseenter', function () {
             document.querySelectorAll('[sound]').forEach(s => s.components.sound.stopSound());
-            el.setAttribute('color', data.color);
             document.querySelector(`#${data.sound}`).components.sound.playSound();
             document.querySelector('a-sky').setAttribute('src', `#${data.sky}`);
             document.querySelector('a-plane').setAttribute('src', `#${data.floor}`);
         });
         el.addEventListener('mouseleave', function () {
-            el.setAttribute('color', 'blue');
+            el.setAttribute('scale', '0 0 0')
+            document.querySelector(`#${next}`).setAttribute('scale', '1 1 1');
         });
     }
 });
