@@ -9,7 +9,7 @@ AFRAME.registerComponent('change-on-hover', {
     init: function () {
         let data = this.data;
         let el = this.el;
-        el.addEventListener('mouseenter', function () {
+        el.addEventListener('click', function () {
             document.querySelectorAll('[sound]').forEach(s => s.components.sound.stopSound());
             document.querySelector(`#${data.sound}`).components.sound.playSound();
             document.querySelector('a-sky').setAttribute('src', `#${data.sky}`);
