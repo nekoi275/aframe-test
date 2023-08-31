@@ -17,12 +17,11 @@ AFRAME.registerComponent('change-on-click', {
         el.addEventListener('click', function () {
             sceneNumber++;
             if (sceneNumber >= SCENES.length) sceneNumber = 0;
-
             document.querySelectorAll('[sound]').forEach(s => s.components.sound.stopSound());
             document.querySelector(`#${data.sound}`).components.sound.playSound();
             document.querySelector('a-sky').setAttribute('src', `#${data.sky}`);
             document.querySelector('a-plane').setAttribute('src', `#${data.floor}`);
-            el.setAttribute('change-on-click', `sound: ${SCENES[sceneNumber].sound}; sky: ${SCENES[sceneNumber].sky}; floor: ${SCENES[sceneNumber].floor}`)
+            el.setAttribute('change-on-click', `sound: ${SCENES[sceneNumber].sound}; sky: ${SCENES[sceneNumber].sky}; floor: ${SCENES[sceneNumber].floor}`);
         });
     }
 });
