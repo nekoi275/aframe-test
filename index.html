@@ -18,6 +18,8 @@
             <img id="grassTexture" src="assets/grass.jpg">
             <img id="beachTexture" src="assets/beach.jpg">
             <img id="sandTexture" src="assets/sand.jpg">
+            <img id="redWood" src="assets/red_wood.jpg">
+            <img id="greyWood" src="assets/grey_wood.jpg">
             <audio id="starlit" src="assets/starlit_sanctum.mp3" preload></audio>
             <audio id="sublime" src="assets/sublime_spring.mp3" preload></audio>
             <audio id="sunshine" src="assets/sunshine_beach.mp3" preload></audio>
@@ -27,9 +29,11 @@
         <a-box id="moonScene" color="blue" position="0 2 -5" rotation="0 45 45" scale="1 1 1"
             change-on-click></a-box>
 
-        <a-cylinder color="crimson" position="3 0 -5" height="10" radius="0.3"></a-cylinder>
-        <a-cylinder color="crimson" position="6 0 -5" height="10" radius="0.3"></a-cylinder>
-        <a-box color="crimson" position="2.5 10 -5" depth="2" height="2" width="0.5"></a-box>
+        <a-cylinder src="#redWood" position="3 0 -5" height="10" radius="0.3"></a-cylinder>
+        <a-cylinder src="#redWood" position="6 0 -5" height="10" radius="0.3"></a-cylinder>
+        <a-box src="#redWood" position="4.5 4 -5" depth="0.5" height="0.5" width="6"></a-box>
+        <a-box src="#redWood" position="4.5 5 -5" depth="0.5" height="0.5" width="6"></a-box>
+        <a-box src="#greyWood" position="4.5 5.1 -5" depth="0.5" height="0.5" width="6"></a-box>
         
         <a-entity id="starlitSound" sound="src: #starlit; loop: true; autoplay: true"></a-entity>
         <a-entity id="sublimeSound" sound="src: #sublime; loop: true"></a-entity>
