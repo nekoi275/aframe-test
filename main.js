@@ -15,7 +15,7 @@ AFRAME.registerComponent('change-on-click', {
         let sceneNumber = 0;
 
         el.addEventListener('click', function () {
-            if (sceneNumber < SCENES.length - 1) {
+            if (sceneNumber < SCENES.length) {
                 sceneNumber++;
             } else {
                 sceneNumber = 0;
