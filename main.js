@@ -1,9 +1,5 @@
 AFRAME.registerComponent('change-on-click', {
-    schema: {
-        sound: { type: 'string' },
-        sky: { type: 'string' },
-        floor: { type: 'string' }
-    },
+    schema: {},
 
     init: function () {
         let data = this.data;
@@ -18,10 +14,9 @@ AFRAME.registerComponent('change-on-click', {
             sceneNumber++;
             if (sceneNumber >= SCENES.length) sceneNumber = 0;
             document.querySelectorAll('[sound]').forEach(s => s.components.sound.stopSound());
-            document.querySelector(`#${data.sound}`).components.sound.playSound();
-            document.querySelector('a-sky').setAttribute('src', `#${data.sky}`);
-            document.querySelector('a-plane').setAttribute('src', `#${data.floor}`);
-            el.setAttribute('change-on-click', `sound: ${SCENES[sceneNumber].sound}; sky: ${SCENES[sceneNumber].sky}; floor: ${SCENES[sceneNumber].floor}`);
+            document.querySelector(`#${SCENES[sceneNumber].sound}`).components.sound.playSound();
+            document.querySelector('a-sky').setAttribute('src', `#${SCENES[sceneNumber].sky}`);
+            document.querySelector('a-plane').setAttribute('src', `#${SCENES[sceneNumber].floor}`);
         });
     }
 });
