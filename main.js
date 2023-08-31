@@ -16,6 +16,7 @@ AFRAME.registerComponent('change-on-click', {
 
         el.addEventListener('click', function () {
             sceneNumber++;
+            if (sceneNumber >= SCENES.length) sceneNumber = 0;
 
             document.querySelectorAll('[sound]').forEach(s => s.components.sound.stopSound());
             document.querySelector(`#${data.sound}`).components.sound.playSound();
