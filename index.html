@@ -24,13 +24,9 @@
         </a-assets>
         <a-sky src="#skyTexture"></a-sky>
 
-        <a-box id="moonScene" color="blue" position="0 2 -5" rotation="0 45 45" scale="0 0 0"
-            change-on-hover="sound: starlitSound; sky: skyTexture; floor: groundTexture; next: templeScene"></a-box>
-        <a-box id="templeScene" color="blue" position="0 2 -5" rotation="0 45 45" scale="1 1 1"
-            change-on-hover="sound: sublimeSound; sky: templeTexture; floor: grassTexture; next: beachScene"></a-box>
-        <a-box id="beachScene" color="blue" position="0 2 -5" rotation="0 45 45" scale="0 0 0"
-            change-on-hover="sound: sunshineSound; sky: beachTexture; floor: sandTexture; next: moonScene"></a-box>
-
+        <a-box id="moonScene" color="blue" position="0 2 -5" rotation="0 45 45" scale="1 1 1"
+            change-on-click="sound: sublimeSound; sky: templeTexture; floor: grassTexture"></a-box>
+        
         <a-entity id="starlitSound" sound="src: #starlit" loop="true" autoplay="true" loop="true"></a-entity>
         <a-entity id="sublimeSound" sound="src: #sublime" loop="true"></a-entity>
         <a-entity id="sunshineSound" sound="src: #sunshine" loop="true"></a-entity>
