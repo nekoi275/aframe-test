@@ -7,7 +7,8 @@ AFRAME.registerComponent('change-on-click', {
         const SCENES = [{ sound: 'moonSound', sky: 'skyTexture', floor: 'groundTexture' },
         { sound: 'forestSound', sky: 'forestTexture', floor: 'stoneTexture' },
         { sound: 'citySound', sky: 'cityTexture', floor: 'asphaltTexture' },
-        { sound: 'winterSound', sky: 'winterTexture', floor: 'snowTexture' }]
+        { sound: 'winterSound', sky: 'winterTexture', floor: 'snowTexture' },
+        { sound: 'desertSound', sky: 'desertTexture', floor: 'sandTexture' }]
 
         let sceneNumber = 0;
 
