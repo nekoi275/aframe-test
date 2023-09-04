@@ -14,7 +14,7 @@
         <a-assets>
             <img id="skyTexture" src="assets/sky.jpg">
             <img id="groundTexture" src="assets/moon.jpg">
-            <img id="templeTexture" src="assets/temple.jpg">
+            <img id="forestTexture" src="assets/forest.jpg">
             <img id="grassTexture" src="assets/grass.jpg">
             <img id="beachTexture" src="assets/beach.jpg">
             <img id="sandTexture" src="assets/sand.jpg">
@@ -22,9 +22,9 @@
             <img id="greyWood" src="assets/grey_wood.jpg">
             <img id="gatePic" src="assets/gate_picture.jpg">
             <img id="blackStone" src="assets/black_stone.jpg">
-            <audio id="starlit" src="assets/starlit_sanctum.mp3" preload></audio>
-            <audio id="sublime" src="assets/sublime_spring.mp3" preload></audio>
-            <audio id="sunshine" src="assets/sunshine_beach.mp3" preload></audio>
+            <audio id="moonSong" src="assets/moon_song.mp3" preload></audio>
+            <audio id="forestSong" src="assets/forest_song.mp3" preload></audio>
+            <audio id="beachSong" src="assets/beach_song.mp3" preload></audio>
         </a-assets>
         <a-sky src="#skyTexture"></a-sky>
 
@@ -47,9 +47,9 @@
         <a-cylinder src="#blackStone" position="2 0 -5" height="1" radius="0.4" rotation="0 45"></a-cylinder>
         
         
-        <a-entity id="starlitSound" sound="src: #starlit; loop: true; autoplay: true"></a-entity>
-        <a-entity id="sublimeSound" sound="src: #sublime; loop: true"></a-entity>
-        <a-entity id="sunshineSound" sound="src: #sunshine; loop: true"></a-entity>
+        <a-entity id="moonSound" sound="src: #moonSong; loop: true; autoplay: true"></a-entity>
+        <a-entity id="forestSound" sound="src: #forestSong; loop: true"></a-entity>
+        <a-entity id="beachSound" sound="src: #beachSong; loop: true"></a-entity>
         <a-camera>
             <a-cursor></a-cursor>
         </a-camera>
